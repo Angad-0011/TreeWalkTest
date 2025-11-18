@@ -1,0 +1,4 @@
+fastapi
+uvicorn
+streetlevel
+python-dotenv

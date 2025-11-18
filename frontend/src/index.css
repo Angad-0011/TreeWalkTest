@@ -1,0 +1,253 @@
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #0f172a;
+  background-color: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  font-weight: 600;
+  background: #16a34a;
+  color: #fff;
+}
+
+button.secondary {
+  background: #0f172a;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr 22rem;
+  gap: 1rem;
+  padding: 1rem;
+  flex: 1;
+}
+
+@media (max-width: 1024px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  overflow: hidden;
+}
+
+.panel h2 {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background: #e2e8f0;
+  font-size: 1rem;
+}
+
+.panel-body {
+  padding: 0.75rem 1rem 1rem;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.badge.good { background: #16a34a; }
+.badge.fair { background: #eab308; }
+.badge.critical { background: #dc2626; }
+.badge.dead { background: #0ea5e9; }
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.modal {
+  max-width: 480px;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal header {
+  padding: 1rem;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.modal form {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.modal label {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: #0f172a;
+}
+
+.modal input,
+.modal select,
+.modal textarea {
+  padding: 0.6rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.modal footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.75rem 1rem 1rem;
+  gap: 0.5rem;
+}
+
+.street-mode {
+  display: grid;
+  grid-template-rows: 1fr 380px;
+  gap: 0.75rem;
+}
+
+.viewer-shell {
+  position: relative;
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 240px;
+}
+
+.viewer-shell .crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 52px;
+  height: 52px;
+  margin-top: -26px;
+  margin-left: -26px;
+  border: 2px dashed #eab308;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.viewer-hud {
+  position: absolute;
+  inset: 0;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.viewer-hud .top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.viewer-hud .meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.viewer-placeholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.map-panel {
+  height: 100%;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+.legend {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.legend .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.mission-control {
+  display: grid;
+  gap: 0.75rem;
+}
+
+input[type="file"] {
+  display: block;
+}
